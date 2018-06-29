@@ -19,14 +19,30 @@ class RoomList extends Component {
 		});
 	}
 
+	handleCreateRoom(event) {
+		this.roomsRef.push({
+			name: event.target.value
+		});
+	}
+
 	render() {
 		return (
 			<div>
+
+					<form onSubmit={this.handleCreateRoom}> 
+						<h3>Create new room</h3>
+						<label>
+						Enter a room name:
+						<input type="text" />
+						</label>
+						<input type="submit" value="Submit" />
+					</form>
 				{
 					this.state.rooms.map(room => 
 						<p key={room.key}>{room.name}</p>	
 					)
 				}
+
 			</div>
 		);
 	}

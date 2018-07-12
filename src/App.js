@@ -20,14 +20,17 @@ import MessageList from './components/MessageList';
       super(props);
 
       this.state = {
-        activeRoom: "Room1"
+        activeRoom: '',
+        activeRoomKey: ''
       };
     }
 
-    handleRoomClick = (name) => {
+    handleRoomClick = (name,key) => {
         this.setState({activeRoom:name});
-        
+        this.setState({activeRoomKey:key});
+       console.log("activeRoomkey = " + this.state.activeRoomKey);
     }
+    
 
     render() {
       return (
@@ -35,10 +38,12 @@ import MessageList from './components/MessageList';
           <h1>Welcome to Chat App</h1>
           <RoomList handleRoomClick={this.handleRoomClick}
             firebase = {firebase}
-            activeRoom = {this.state.activeRoom} />
+            activeRoom = {this.state.activeRoom} 
+            activeRoomKey = {this.state.activeRoomKey} />
            <MessageList
               firebase = {firebase}
-              activeRoom = {this.state.activeRoom} /> 
+              activeRoom = {this.state.activeRoom}
+              activeRoomKey = {this.state.activeRoomKey} /> 
         </div>
       );
     }

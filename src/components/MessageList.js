@@ -5,22 +5,47 @@ class MessageList extends Component {
 		super(props);
 
 		this.state = {
-			messages : []
+			allMessages : [],
+			messagesPerRoom : []
 		};
-		this.messagesRef = this.props.firebase.database().ref('Messages');
+		this.messagesRef = this.props.firebase.database().ref('messages');
 	}
 
-	componentDidMount() {
-			this.setState({messages: "This is the messages from room1, which is the activeRoom on componen mount"});
-		}
+	
+		
 	
 
+	componentDidMount(){
+		console.log("From MessageList.js - activeRoomKey = " + this.props.activeRoom.key);
+			this.messagesRef.on('child_added', snapshot => {
+			let message = Object.assign(snapshot.val(), {key: snapshot.key})
+			this.setState({ allMessages: this.state.allMessages.concat(message)});
+			this.setState({ messagesPerRoom: this.state.allMessages.filter ( message => message.roomId === this.props.activeRoomkey ) })
+			 console.log("activeRoomkey = " + this.props.activeRoomKey);
 
+			 console.log("messagePerRoom = " + this.state.messagesPerRoom);
+
+		});
+
+		}
+	
 
 	render() {
 		return(
 			<div>
-				<p>{this.state.messages}</p>
+				{ this.state.messagesPerRoom.map ( message => 
+
+					<ul id="message-list">
+						<li key={message.key}>
+								<p>{ message.username }</p>
+								<p>{ message.content }</p>
+								<p>{ message.sentAt }</p>
+								<p>{ message.roomId }</p>
+							
+						</li>
+					</ul>
+					)
+				}
 			</div>
 		);
 	}

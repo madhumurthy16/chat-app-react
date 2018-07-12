@@ -25,18 +25,24 @@ import MessageList from './components/MessageList';
       };
     }
 
-    handleRoomClick = (name,key) => {
+    handleRoomClick (name,key) {
         this.setState({activeRoom:name});
         this.setState({activeRoomKey:key});
        console.log("activeRoomkey = " + this.state.activeRoomKey);
     }
+    /*handleRoomClick = (name,key) => {
+        this.setState({activeRoom:name});
+        this.setState({activeRoomKey:key});
+       console.log("activeRoomkey = " + this.state.activeRoomKey);
+    }*/
+    
     
 
     render() {
       return (
         <div className="App">
           <h1>Welcome to Chat App</h1>
-          <RoomList handleRoomClick={this.handleRoomClick}
+          <RoomList handleRoomClick={this.handleRoomClick.bind(this)}
             firebase = {firebase}
             activeRoom = {this.state.activeRoom} 
             activeRoomKey = {this.state.activeRoomKey} />

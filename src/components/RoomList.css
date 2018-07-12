@@ -1,0 +1,12 @@
+#left-sidebar {
+	float: left;
+	width: 20%;
+	padding-left: 20px;
+	text-align: left;
+	border-right: 1px solid #ccc;
+}
+
+.room-list {
+	color: #666;
+	font-size: 18px;
+}

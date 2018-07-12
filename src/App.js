@@ -20,24 +20,15 @@ import MessageList from './components/MessageList';
       super(props);
 
       this.state = {
-        activeRoom: '',
-        activeRoomKey: ''
+        activeRoom: ''
       };
     }
 
-    handleRoomClick (name,key) {
-        this.setState({activeRoom:name});
-        this.setState({activeRoomKey:key});
+    handleRoomClick (room) {
+        this.setState({activeRoom:room});
        console.log("activeRoomkey = " + this.state.activeRoomKey);
     }
-    /*handleRoomClick = (name,key) => {
-        this.setState({activeRoom:name});
-        this.setState({activeRoomKey:key});
-       console.log("activeRoomkey = " + this.state.activeRoomKey);
-    }*/
     
-    
-
     render() {
       return (
         <div className="App">
@@ -49,7 +40,7 @@ import MessageList from './components/MessageList';
            <MessageList
               firebase = {firebase}
               activeRoom = {this.state.activeRoom}
-              activeRoomKey = {this.state.activeRoomKey} /> 
+            /> 
         </div>
       );
     }

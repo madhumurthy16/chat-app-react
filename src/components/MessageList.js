@@ -21,7 +21,7 @@ class MessageList extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-			if(nextProps.activeRoom.key != this.props.activeRoom.key) {
+			if(nextProps.activeRoom.key !== this.props.activeRoom.key) {
 			this.setState({ messagesPerRoom: this.state.allMessages.filter ( message => message.roomId === nextProps.activeRoom.key ) })
 		}
 	}
@@ -36,7 +36,7 @@ class MessageList extends Component {
 							<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
 							<p>{ message.content }</p>
 						</li>
-						)}
+					)}
 				</ul>
 			</div>
 		);

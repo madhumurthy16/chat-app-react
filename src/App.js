@@ -26,7 +26,6 @@ import MessageList from './components/MessageList';
 
     handleRoomClick (room) {
       this.setState({activeRoom:room});
-      console.log("activeRoomkey = " + this.state.activeRoomKey);
     }
     
     render() {
@@ -35,8 +34,7 @@ import MessageList from './components/MessageList';
           <h1>Welcome to Chat App</h1>
           <RoomList handleRoomClick={this.handleRoomClick.bind(this)}
             firebase = {firebase}
-            activeRoom = {this.state.activeRoom} 
-            activeRoomKey = {this.state.activeRoomKey} />
+            activeRoom = {this.state.activeRoom} />
            <MessageList
               firebase = {firebase}
               activeRoom = {this.state.activeRoom} /> 

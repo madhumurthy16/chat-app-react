@@ -25,8 +25,8 @@ import MessageList from './components/MessageList';
     }
 
     handleRoomClick (room) {
-        this.setState({activeRoom:room});
-       console.log("activeRoomkey = " + this.state.activeRoomKey);
+      this.setState({activeRoom:room});
+      console.log("activeRoomkey = " + this.state.activeRoomKey);
     }
     
     render() {
@@ -39,8 +39,7 @@ import MessageList from './components/MessageList';
             activeRoomKey = {this.state.activeRoomKey} />
            <MessageList
               firebase = {firebase}
-              activeRoom = {this.state.activeRoom}
-            /> 
+              activeRoom = {this.state.activeRoom} /> 
         </div>
       );
     }

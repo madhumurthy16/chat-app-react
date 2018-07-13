@@ -34,7 +34,7 @@ class RoomList extends Component {
 
 	render() {
 		return (
-			<div id="left-sidebar">
+			<div className="left-sidebar">
 				<form onSubmit={ (e)=>{ this.handleCreateRoom(this.state.newRoomName,e) } }> 
 					<h3>Create new room</h3>
 					<label>

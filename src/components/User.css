@@ -1,0 +1,22 @@
+#user-auth {
+	float: right;
+	width: 20%;
+	margin-right: 20px;
+}
+
+.btn-submit {
+	padding: 10px 15px;
+	border: none;
+	border-radius: 0;
+	color: #fff;
+	margin-top: 20px;
+}
+
+#btn-signin {
+	margin-right: 5px;
+	background-color: coral;
+}
+
+#btn-signout {
+	background-color: teal;
+}

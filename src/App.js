@@ -3,10 +3,11 @@ import * as firebase from 'firebase';
 import './App.css';
 import RoomList from './components/RoomList';
 import MessageList from './components/MessageList';
+import User from './components/User';
 
 // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyB3kZiZ8vmr3crDUSsAt2kIW7h9mgL5ry8",
+    apiKey: "AIzaSyB3kZiZ8vmr3crDUSsAt2kIW7h9mgL5ry8",  
     authDomain: "chat-app-reactjs-01.firebaseapp.com",
     databaseURL: "https://chat-app-reactjs-01.firebaseio.com",
     projectId: "chat-app-reactjs-01",
@@ -20,12 +21,17 @@ import MessageList from './components/MessageList';
       super(props);
 
       this.state = {
-        activeRoom: ''
+        activeRoom: '',
+        user: ''
       };
     }
 
     handleRoomClick (room) {
       this.setState({activeRoom:room});
+    }
+
+    setUser(user) {
+      this.setState({user:user});
     }
     
     render() {
@@ -38,6 +44,8 @@ import MessageList from './components/MessageList';
            <MessageList
               firebase = {firebase}
               activeRoom = {this.state.activeRoom} /> 
+            <User setUser={this.setUser.bind(this)}
+              firebase = {firebase} />  
         </div>
       );
     }

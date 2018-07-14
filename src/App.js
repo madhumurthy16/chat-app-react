@@ -22,30 +22,33 @@ import User from './components/User';
 
       this.state = {
         activeRoom: '',
-        user: ''
+        user: null
       };
+    }
+
+    setUser(user) {
+      this.setState({user:user});
     }
 
     handleRoomClick (room) {
       this.setState({activeRoom:room});
     }
 
-    setUser(user) {
-      this.setState({user:user});
-    }
-    
     render() {
       return (
         <div className="App">
           <h1>Welcome to Chat App</h1>
-          <RoomList handleRoomClick={this.handleRoomClick.bind(this)}
+          <RoomList 
             firebase = {firebase}
+            handleRoomClick={this.handleRoomClick.bind(this)}
             activeRoom = {this.state.activeRoom} />
-           <MessageList
+          <MessageList
               firebase = {firebase}
               activeRoom = {this.state.activeRoom} /> 
-            <User setUser={this.setUser.bind(this)}
-              firebase = {firebase} />  
+          <User 
+            firebase = {firebase}  
+            setUser = {this.setUser.bind(this)}
+            user = {this.state.user} />
         </div>
       );
     }

@@ -40,7 +40,7 @@ class RoomList extends Component {
 					<label>
 					<input type="text" value={ this.state.newRoomName } onChange={ e=>this.handleChange(e) } name="newRoomName" />
 					</label>
-					<input type="submit" value="Submit" />
+					<button type="submit" value="Submit">Submit</button>
 				</form>
 				
 				<p>Select a chat room to view or send messages</p> 

@@ -7,7 +7,8 @@ class MessageList extends Component {
 
 		this.state = {
 			allMessages : [],
-			messagesPerRoom : []
+			messagesPerRoom : [],
+			newMessage: ""
 		};
 		
 		this.messagesRef = this.props.firebase.database().ref('messages');
@@ -25,6 +26,23 @@ class MessageList extends Component {
 			this.setState({ messagesPerRoom: this.state.allMessages.filter ( message => message.roomId === nextProps.activeRoom.key ) })
 		}
 	}
+
+	handleNewMessage(e) {
+		this.setState({ newMessage : e.target.value });
+	}
+
+	handleSendNewMessage(e) {
+		//Write new message to firebase database at node 'messages'
+		var message = {
+			username: this.props.user.displayName,
+			content: this.state.newMessage,
+			sentAt: 23,
+			roomId: this.props.activeRoom.key
+		};
+
+		//Get a key for a new message and write the new message to database
+		var newMessageKey = this.props.firebase.database().ref().child('messages').push(message).key;
+	}
 	
 
 	render() {
@@ -38,6 +56,13 @@ class MessageList extends Component {
 						</li>
 					)}
 				</ul>
+				<form className="new-message-form">
+					<label>
+						Enter a message:
+						<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" />
+					</label>
+					<button type="submit" className="btn-submit" id="btn-send" onSubmit={ (e) => this.handleSendNewMessage(e) }>Send</button>
+				</form>
 			</div>
 		);
 	}

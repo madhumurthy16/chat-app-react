@@ -30,38 +30,37 @@ class MessageList extends Component {
 	handleNewMessage(e) {
 		this.setState({ newMessage : e.target.value });
 		console.log(this.state.newMessage);
+		
+	}
+
+	handleSendNewMessage(e) {
+		e.preventDefault(); 
 		var message = {
 			username: this.props.user.displayName,
 			content: this.state.newMessage,
-			sentAt: 23,
+			sentAt: this.props.firebase.database.ServerValue.TIMESTAMP,
 			roomId: this.props.activeRoom.key
 		};
 
 		//Write new message to firebase database at node 'messages'
 		this.messagesRef.push(message);
+		this.setState({ messagesPerRoom : this.state.messagesPerRoom.concat(message), newMessage : ""});
 
-	}
-
-	handleSendNewMessage(e) {
-		e.preventDefault(); 
-
-		
-
-		this.setState({ messagesPerRoom : this.state.messagesPerRoom.concat(this.state.newMessage)});
 	}
 	
 	render() {
 		return(
 			<div>
-
 				<ul id="message-list">
 
-					{ this.state.messagesPerRoom.map ( message => 
-						<li key={message.key}>
-							<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
-							<p>{ message.content }</p>
-						</li>
-					)}
+					{ 
+						this.state.messagesPerRoom.map ( message => 
+							<li key={message.key}>
+								<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
+								<p>{ message.content }</p>
+							</li>
+						)
+					}
 				</ul>
 				<form className="new-message-form">
 					<label>

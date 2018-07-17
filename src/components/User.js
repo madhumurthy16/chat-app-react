@@ -24,14 +24,14 @@ class User extends Component {
 
 	render() {
 		return (
-			<div id="user-auth">
+			<section id="user-auth">
 				{
 					<p>Hello, { this.props.user ? this.props.user.displayName : "Guest" }</p>
 					 
 				}
 				<button className="btn-submit" id="btn-signin" type="submit" onClick={ e => this.handleSignIn(e) }>Sign In</button>
 				<button className="btn-submit" id="btn-signout" type="submit" onClick={ e => this.handleSignOut(e) }>Sign Out</button>
-			</div>
+			</section>
 		);
 	}
 }

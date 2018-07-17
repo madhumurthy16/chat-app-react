@@ -36,7 +36,7 @@ import User from './components/User';
 
     render() {
       return (
-        <div className="App">
+        <div className="container">
           <h1>Welcome to Chat App</h1>
           <RoomList 
             firebase = {firebase}

@@ -38,7 +38,7 @@ class MessageList extends Component {
 		var message = {
 			username: this.props.user.displayName,
 			content: this.state.newMessage,
-			sentAt: this.props.firebase.database.ServerValue.TIMESTAMP,
+			sentAt: 12,
 			roomId: this.props.activeRoom.key
 		};
 
@@ -50,7 +50,8 @@ class MessageList extends Component {
 	
 	render() {
 		return(
-			<div>
+			<main className="main-content">
+				<p>{this.props.activeRoom.name}</p>
 				<ul id="message-list">
 
 					{ 
@@ -62,14 +63,16 @@ class MessageList extends Component {
 						)
 					}
 				</ul>
-				<form className="new-message-form">
-					<label>
-						Enter a message:
-						<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" />
-					</label>
-					<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }>Send</button>
-				</form>
-			</div>
+				<section id="send-message">
+					<form>
+						<label>
+							Enter a message:
+							<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" />
+						</label>
+						<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }>Send</button>
+					</form>
+				</section>
+			</main>
 		);
 	}
 }

@@ -34,9 +34,9 @@ class RoomList extends Component {
 
 	render() {
 		return (
-			<div className="left-sidebar">
+			<aside className="left-sidebar">
 				<form onSubmit={ (e)=>{ this.handleCreateRoom(this.state.newRoomName,e) } }> 
-					<h3>Create new room</h3>
+					<h2>Create new room</h2>
 					<label>
 					<input type="text" value={ this.state.newRoomName } onChange={ e=>this.handleChange(e) } name="newRoomName" />
 					</label>
@@ -51,7 +51,7 @@ class RoomList extends Component {
 					)
 				}
 
-			</div>
+			</aside>
 		);
 	}
 }

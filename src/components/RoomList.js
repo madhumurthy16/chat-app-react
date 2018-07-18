@@ -34,24 +34,26 @@ class RoomList extends Component {
 
 	render() {
 		return (
-			<aside className="left-sidebar">
-				<form onSubmit={ (e)=>{ this.handleCreateRoom(this.state.newRoomName,e) } }> 
+			<section id="room-component">
+				
+				<p>Rooms</p> 
+				<ul id="room-list">
+					{
+						this.state.rooms.map(room => 
+							<li onClick={() => this.props.handleRoomClick(room)} key={room.key}>{room.name}</li>	
+						)
+					}
+				</ul>
+
+				<form id="create-room" onSubmit={ (e)=>{ this.handleCreateRoom(this.state.newRoomName,e) } }> 
 					<h2>Create new room</h2>
 					<label>
 					<input type="text" value={ this.state.newRoomName } onChange={ e=>this.handleChange(e) } name="newRoomName" />
 					</label>
 					<button type="submit" value="Submit">Submit</button>
 				</form>
-				
-				<p>Select a chat room to view or send messages</p> 
 
-				{
-					this.state.rooms.map(room => 
-						<p className="room-list" onClick={() => this.props.handleRoomClick(room)} key={room.key}>{room.name}</p>	
-					)
-				}
-
-			</aside>
+			</section>
 		);
 	}
 }

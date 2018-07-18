@@ -36,20 +36,29 @@ import User from './components/User';
 
     render() {
       return (
-        <div className="container">
-          <h1>Welcome to Chat App</h1>
-          <RoomList 
-            firebase = {firebase}
-            handleRoomClick={this.handleRoomClick.bind(this)}
-            activeRoom = {this.state.activeRoom} />
-          <MessageList
-              firebase = {firebase}
-              activeRoom = {this.state.activeRoom}
-              user = {this.state.user} /> 
-          <User 
-            firebase = {firebase}  
-            setUser = {this.setUser.bind(this)}
-            user = {this.state.user} />
+        <div className="App">
+
+          <nav>
+            <h1 id="logo">Chat App</h1>
+            <User 
+              firebase = {firebase}  
+              setUser = {this.setUser.bind(this)}
+              user = {this.state.user} />
+          </nav>
+          <div className="content-wrapper">
+            <aside className="sidebar">
+              <RoomList 
+                firebase = {firebase}
+                handleRoomClick={this.handleRoomClick.bind(this)}
+                activeRoom = {this.state.activeRoom} />
+            </aside>    
+
+            <MessageList
+                  firebase = {firebase}
+                  activeRoom = {this.state.activeRoom}
+                  user = {this.state.user} /> 
+          </div>
+
         </div>
       );
     }

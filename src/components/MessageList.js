@@ -50,8 +50,9 @@ class MessageList extends Component {
 	
 	render() {
 		return(
-			<main className="main-content">
-				<p>{this.props.activeRoom.name}</p>
+			<main id="messages-component">
+
+				<p>{ this.props.activeRoom? this.props.activeRoom.name : 'Select a chat room to view or send messages'}</p>
 				<ul id="message-list">
 
 					{ 
@@ -64,14 +65,14 @@ class MessageList extends Component {
 					}
 				</ul>
 				<section id="send-message">
-					<form>
+					<form id="create-message">
 						<label>
-							Enter a message:
-							<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" />
+							<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" placeholder="Start chatting!"/>
 						</label>
 						<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }>Send</button>
 					</form>
 				</section>
+
 			</main>
 		);
 	}

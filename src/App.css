@@ -18,20 +18,23 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 2rem;
+  margin-bottom: 5px;
   background-color: #9FB1BC;
   color: #2E5266;
   border-top: 3px solid #2E5266;
 }
 
 #logo {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: semi-bold;
   margin-top: 0;
 }
 
 aside.sidebar {
   background-color: #2E5266;
   color: #fff;
-  width: 20%;
-  height: 90vh;
+  width: 25%;
+  height: 80vh;
   padding: 15px 2rem;
 }
 

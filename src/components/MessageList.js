@@ -58,14 +58,14 @@ class MessageList extends Component {
 					{ 
 						this.state.messagesPerRoom.map ( message => 
 							<li key={message.key}>
-								<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
 								<p>{ message.content }</p>
+								<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
 							</li>
 						)
 					}
 				</ul>
 				<section id="send-message">
-					<form id="create-message">
+					<form id="form-create-message">
 						<label>
 							<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" placeholder="Start chatting!"/>
 						</label>

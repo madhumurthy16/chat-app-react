@@ -36,7 +36,7 @@ class RoomList extends Component {
 		return (
 			<section id="room-component">
 				
-				<p>Rooms</p> 
+				<h3>Rooms</h3> 
 				<ul id="room-list">
 					{
 						this.state.rooms.map(room => 
@@ -45,12 +45,12 @@ class RoomList extends Component {
 					}
 				</ul>
 
-				<form id="create-room" onSubmit={ (e)=>{ this.handleCreateRoom(this.state.newRoomName,e) } }> 
-					<h2>Create new room</h2>
+				<form id="form-create-room" onSubmit={ (e)=>{ this.handleCreateRoom(this.state.newRoomName,e) } }> 
+					<h3 id="new-room">Create new room</h3>
 					<label>
-					<input type="text" value={ this.state.newRoomName } onChange={ e=>this.handleChange(e) } name="newRoomName" />
+					<input type="text" value={ this.state.newRoomName } onChange={ e=>this.handleChange(e) } name="newRoomName" placeholder="Enter room name" />
 					</label>
-					<button type="submit" value="Submit">Submit</button>
+					<button className="btn-submit" id="btn-newroom" type="submit" value="Submit">Go</button>
 				</form>
 
 			</section>

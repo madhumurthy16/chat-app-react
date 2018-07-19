@@ -15,6 +15,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   background-color: #D3D0CB;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
 }
 
 ul {
@@ -27,6 +29,29 @@ p {
 	margin-top: 1.5rem;
 }
 
+h1,h2,h3 {
+	margin: 20px 0;
+	font-weight: 700;
+}
+
 h1 {
-	font-size: 2.4rem;
+	font-size: 2.8rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+}
+
+form input {
+	font-size: 1.4rem;
+	padding: 1.2rem;
+	border-radius: 20px;
+	border: 1px solid #eee;
+	width: 100%;
+	-webkit-appearance: none; 
+    -moz-appearance: none; 
 }

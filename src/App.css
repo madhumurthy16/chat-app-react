@@ -18,8 +18,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 2rem;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   background-color: #9FB1BC;
+  background-color: #E2C044;
   color: #2E5266;
   border-top: 3px solid #2E5266;
 }
@@ -27,7 +28,6 @@ nav {
 #logo {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: semi-bold;
-  margin-top: 0;
 }
 
 aside.sidebar {

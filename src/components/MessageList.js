@@ -52,13 +52,13 @@ class MessageList extends Component {
 		return(
 			<main id="messages-component">
 
-				<p>{ this.props.activeRoom? this.props.activeRoom.name : 'Select a chat room to view or send messages'}</p>
+				<p id="active-room-name">{ this.props.activeRoom? this.props.activeRoom.name : 'Select a chat room to view or send messages'}</p>
 				<ul id="message-list">
 
 					{ 
 						this.state.messagesPerRoom.map ( message => 
 							<li key={message.key}>
-								<p>{ message.content }</p>
+								<p className="message-content">{ message.content }</p>
 								<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
 							</li>
 						)

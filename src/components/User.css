@@ -4,6 +4,8 @@
 
 #username {
 	margin-top: 0;
+	font-size: 1.4rem;
+	text-align: center;
 }
 
 
@@ -14,14 +16,24 @@
 	color: #fff;
 	font-size: 1.4rem;
 	letter-spacing: 1px;
-	/*margin-top: 5px;*/
+	
 }
+
+#btn-signin, #btn-signout {
+	background-color: transparent;
+	padding: 0 0.8rem;
+	margin-top: 15px;
+}
+
 
 #btn-signin {
 	margin-right: .5rem;
-	background-color: #E2C044;
+	/*background-color: #2E5266;*/
+	background-color: none;
+	border-right: 1px solid #fff;
+	border-radius: 0;
 }
 
 #btn-signout {
-	color: #E2C044;
+	/*background-color: transparent;*/
 }

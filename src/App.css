@@ -3,14 +3,17 @@
   flex-direction: column;
   width: 80%;
   margin: 30px auto;
+  webkit-box-shadow: 7px 7px 25px -6px rgba(130,126,130,1);
+-moz-box-shadow: 7px 7px 25px -6px rgba(130,126,130,1);
+box-shadow: 7px 7px 25px -6px rgba(130,126,130,1);
   /*padding: 2rem;*/
-  height: 100vh;
   /*background-color: #fff;*/
 }
 
 .content-wrapper {
   display: flex;
   /*flex: 1;*/
+  height: 80vh;
 }
 
 nav {
@@ -34,7 +37,7 @@ aside.sidebar {
   background-color: #2E5266;
   color: #fff;
   width: 25%;
-  height: 80vh;
+  /*height: 80vh;*/
   padding: 15px 2rem;
 }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MessageList.css';
+import moment from 'moment';
 
 class MessageList extends Component {
 	constructor(props) {
@@ -35,10 +36,11 @@ class MessageList extends Component {
 
 	handleSendNewMessage(e) {
 		e.preventDefault(); 
-		var message = {
+
+		let message = {
 			username: this.props.user.displayName,
 			content: this.state.newMessage,
-			sentAt: 12,
+			sentAt: moment().format('MMMM Do YYYY, h:mm a'),
 			roomId: this.props.activeRoom.key
 		};
 
@@ -58,8 +60,9 @@ class MessageList extends Component {
 					{ 
 						this.state.messagesPerRoom.map ( message => 
 							<li key={message.key}>
+								<p className="username">{ message.username }</p>
 								<p className="message-content">{ message.content }</p>
-								<p className="username">{ message.username } @ <span className="time-sent">{ message.sentAt }</span></p>
+								<p className="time-sent">{ message.sentAt }</p>
 							</li>
 						)
 					}

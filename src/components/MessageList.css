@@ -3,22 +3,25 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height: 80vh;
-	padding: 2rem;
-	background-color: #D3D0CB;
+	padding-top: 2rem;
+	background-color: #D3D0CB;	
+	/*height: 100vh;*/
 }
 
 #messages-component #active-room-name {
 	font-size: 1.8rem;
 	font-weight: 700;
+	margin-bottom: 2rem;
 }
 
 #message-list {
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
+	align-items: center;
 	width: 50%;
 	list-style-type: none;
+	overflow-y: scroll;
 }
 
 #message-list p {
@@ -35,6 +38,15 @@
 	padding: 5px;
     margin-top: 30px;
     color: #666963;
+
+    -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 8px rgba(0,0,0,0.3);
+
+    /*
+    -webkit-box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);
+-moz-box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);
+box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);*/
 }
 
 #message-list > li:nth-child(2n+2) {
@@ -50,16 +62,24 @@
     line-height: 1.6;
 }
 
-#message-list .username {
+#message-list .username, #message-list .time-sent {
 	font-size: 1rem;
 	font-weight: 700;
-	color: #888;
 	color: #6E8898;
+	text-align: left;
+}
+
+#message-list .time-sent {
+	color: #888;
 	text-align: right;
 }
 
+
 #send-message {
 	width: 100%;
+	padding: 2rem;
+	margin: 1rem 0;
+	z-index: 1;
 }
 
 #form-create-message {
@@ -68,7 +88,7 @@
 }
 
 #form-create-message label {
-	flex-grow: 8;
+	flex-grow: 1;
 }
 
 #form-create-message  input {

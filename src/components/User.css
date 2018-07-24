@@ -1,5 +1,4 @@
 #user-auth {
-	
 }
 
 #username {
@@ -9,15 +8,6 @@
 }
 
 
-.btn-submit {
-	padding: 10px 1.5rem;
-	border: none;
-	border-radius: 3px;
-	color: #fff;
-	font-size: 1.4rem;
-	letter-spacing: 1px;
-	
-}
 
 #btn-signin, #btn-signout {
 	background-color: transparent;

@@ -5,12 +5,14 @@
 	width: 100%;
 	padding-top: 2rem;
 	background-color: #D3D0CB;	
+  	background-color: #fff;
+
 	/*height: 100vh;*/
 }
 
 #messages-component #active-room-name {
 	font-size: 1.8rem;
-	font-weight: 700;
+	font-weight: normal;
 	margin-bottom: 2rem;
 }
 
@@ -34,19 +36,20 @@
 	width: 80%;
 	/*border: 1px solid #D3D0CB;*/
 	background-color: #fff;
+  	background-color: ;
 	border-radius: 5px;
-	padding: 5px;
+	padding: 10px;
     margin-top: 30px;
     color: #666963;
 
     -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 1px 8px rgba(0,0,0,0.3);
 	box-shadow: 0 1px 8px rgba(0,0,0,0.3);
-
-    /*
-    -webkit-box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);
--moz-box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);
-box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);*/
+	background: #d3d0cb; /* Old browsers */
+	background: -moz-linear-gradient(top, #d3d0cb 0%, #efeee8 49%, #efeee8 65%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #d3d0cb 0%,#efeee8 49%,#efeee8 65%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #d3d0cb 0%,#efeee8 49%,#efeee8 65%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d0cb', endColorstr='#efeee8',GradientType=0 ); /* IE6-9 */
 }
 
 #message-list > li:nth-child(2n+2) {
@@ -58,7 +61,7 @@ box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);*/
 #message-list .message-content {
 	font-size: 1.4rem;
     font-weight: 400;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     line-height: 1.6;
 }
 
@@ -98,7 +101,9 @@ box-shadow: 2px 2px 13px 3px rgba(219,215,219,1);*/
 
 #btn-send {
 	background-color: #E2C044;
+	background-color: #6E8898;
 	color: #fff;
 	border-radius: 5px;
 	margin-left: 2px;
 }
+

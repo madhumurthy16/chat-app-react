@@ -18,12 +18,11 @@
 
 #btn-signin {
 	margin-right: .5rem;
-	/*background-color: #2E5266;*/
-	background-color: none;
-	border-right: 1px solid #fff;
+	color: #2E5266;
 	border-radius: 0;
+	border-right: 0.2px solid #A58C32;
 }
 
 #btn-signout {
-	/*background-color: transparent;*/
+	background-color: transparent;
 }

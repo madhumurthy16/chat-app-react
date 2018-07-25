@@ -36,7 +36,7 @@ class RoomList extends Component {
 		return (
 			<section id="room-component">
 				
-				<h3>Rooms</h3> 
+				<h3>Chat rooms</h3> 
 				<ul id="room-list">
 					{
 						this.state.rooms.map(room => 

@@ -3,18 +3,11 @@
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  webkit-box-shadow: 7px 7px 25px -6px rgba(130,126,130,1);
--moz-box-shadow: 7px 7px 25px -6px rgba(130,126,130,1);
-box-shadow: 7px 7px 25px -6px rgba(130,126,130,1);
-  /*padding: 2rem;*/
-  /*background-color: #fff;*/
 }
 
 .content-wrapper {
   display: flex;
   height: 90vh;
-
-  /*flex: 1;*/
 }
 
 nav {
@@ -22,36 +15,37 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 2rem;
-  /*margin-bottom: 2px;*/
-  background-color: #9FB1BC;
+  margin-bottom: 2px;
   background-color: #E2C044;
   color: #2E5266;
   border-top: 2px solid #2E5266;
-  box-shadow: 0 1px 8px rgba(0,0,0,.3)
 }
 
 #logo {
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: semi-bold;
+  font-weight: 500;
 }
 
 aside.sidebar {
-  background-color: #2E5266;
-  background-color: #D3D0CB;
-  border-right: 1px solid #c6c4c0;
-  /*color: #fff;*/
-
+  background-color: #E3E1DD;
+  border-right: 1px solid #DFDCD9;
   width: 25%;
-  /*height: 80vh;*/
   padding: 15px 2rem;
 }
 
-/*.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
+/**************************************************
+  Media Queries
+ **************************************************/
+ 
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
+ @media (max-width: 1024px) {
+  .content-wrapper {
+    flex-wrap: wrap;
+  }
+
+  aside.sidebar {
+    width: 100%;
+  }
+
+} 
+

@@ -16,9 +16,8 @@ body {
   background-color: #fff;
   font-family: 'Arimo', sans-serif;
   font-family: 'Roboto', sans-serif;
-
   font-weight: 400;
-  color: #555;
+  color: #666963;
 }
 
 ul {
@@ -44,7 +43,7 @@ h2 {
 }
 
 h3 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 form input {
@@ -55,6 +54,20 @@ form input {
 	width: 100%;
 	-webkit-appearance: none; 
     -moz-appearance: none; 
+    color: #555;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #999;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #999;
 }
 
 .btn-submit {
@@ -63,11 +76,11 @@ form input {
 	border-radius: 3px;
 	color: #fff;
 	font-size: 1.4rem;
-	letter-spacing: 1px;
 	cursor: pointer;
 }
 
 #btn-send:hover, #btn-newroom:hover {
 	background-color: #9FB1BC;
 }
+
 

@@ -1,13 +1,9 @@
-#user-auth {
-}
-
 #username {
 	margin-top: 0;
 	font-size: 1.4rem;
 	text-align: center;
+	font-weight: normal;
 }
-
-
 
 #btn-signin, #btn-signout {
 	background-color: transparent;
@@ -15,9 +11,7 @@
 	margin-top: 15px;
 }
 
-
 #btn-signin {
-	margin-right: .5rem;
 	color: #2E5266;
 	border-radius: 0;
 	border-right: 0.2px solid #A58C32;

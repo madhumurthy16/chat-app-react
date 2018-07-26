@@ -35,12 +35,12 @@ class RoomList extends Component {
 	render() {
 		return (
 			<section id="room-component">
-				
 				<h3>Chat rooms</h3> 
 				<ul id="room-list">
 					{
 						this.state.rooms.map(room => 
-							<li onClick={() => this.props.handleRoomClick(room)} key={room.key}>{room.name}</li>	
+							<li onClick={() => this.props.handleRoomClick(room)} key={room.key}><i class="icon ion-md-checkmark-circle-outline"></i>
+{room.name}</li>	
 						)
 					}
 				</ul>
@@ -50,7 +50,7 @@ class RoomList extends Component {
 					<label>
 					<input type="text" value={ this.state.newRoomName } onChange={ e=>this.handleChange(e) } name="newRoomName" placeholder="Enter room name" />
 					</label>
-					<button className="btn-submit" id="btn-newroom" type="submit" value="Submit">Go</button>
+					<button className="btn-submit" id="btn-newroom" type="submit" value="Submit">Add Room</button>
 				</form>
 
 			</section>

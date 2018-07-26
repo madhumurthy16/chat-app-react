@@ -28,7 +28,7 @@ class User extends Component {
 				<p id="username">Hello, { this.props.user ? this.props.user.displayName : "Guest" }</p>
 					 
 				<button className="btn-submit" id="btn-signin" type="submit" onClick={ e => this.handleSignIn(e) }>Sign In</button>
-				<button className="btn-submit" id="btn-signout" type="submit" onClick={ e => this.handleSignOut(e) }>Sign Out</button>
+				<button className="btn-submit hide" id="btn-signout" type="submit" onClick={ e => this.handleSignOut(e) }>Sign Out</button>
 			</section>
 		);
 	}

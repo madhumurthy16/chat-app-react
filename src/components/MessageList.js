@@ -72,7 +72,7 @@ class MessageList extends Component {
 						<label>
 							<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" placeholder="Start chatting!"/>
 						</label>
-						<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }>Send</button>
+						<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }><i class="icon ion-md-paper-plane"></i></button>
 					</form>
 				</section>
 

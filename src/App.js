@@ -39,7 +39,7 @@ import User from './components/User';
         <div className="App">
 
           <nav>
-            <h1 id="logo">ChatApp</h1>
+            <h1 id="logo">ChitChat</h1>
             <User 
               firebase = {firebase}  
               setUser = {this.setUser.bind(this)}

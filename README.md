@@ -1,4 +1,4 @@
-Slack inspired real-time chat application, that allows users to create new chat rooms, send/receive messages. Built the project ground up using ReactJS, JSX, Firebase and styled using css3 flexbox.
+>Slack inspired real-time chat application, that allows users to create new chat rooms, send/receive messages. Built the project ground up using ReactJS, JSX, Firebase and styled using css3 flexbox.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 

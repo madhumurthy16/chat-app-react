@@ -1,6 +1,6 @@
 # ChitChat
 
-Slack inspired real-time chat application, that allows users to create new chat rooms and send/receive messages. The project is built ground up using **ReactJS, Firebase** and responsive styling was done using **CSS3 flexbox.**
+Slack inspired real-time chat application, that allows users to create new chat rooms and send/receive messages. The project is built ground up using **React, Firebase** and responsive styling was done using **CSS3 flexbox.**
 
 ## Screenshot
 

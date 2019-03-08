@@ -40,7 +40,7 @@ class MessageList extends Component {
 		let message = {
 			username: this.props.user.displayName,
 			content: this.state.newMessage,
-			sentAt: moment().format('MMMM Do YYYY, h:mm a'),
+			sentAt: moment().format('MMMM Do, h:mm a'),
 			roomId: this.props.activeRoom.key
 		};
 
@@ -54,13 +54,13 @@ class MessageList extends Component {
 		return(
 			<main id="messages-component">
 
-				<p id="active-room-name">{ this.props.activeRoom? this.props.activeRoom.name : 'Select a chat room to view or send messages'}</p>
+				<h2 id="active-room-name">{ this.props.activeRoom? this.props.activeRoom.name : 'Select a chat room to view or send messages'}</h2>
 				<ul id="message-list">
 
 					{ 
 						this.state.messagesPerRoom.map ( message => 
 							<li key={message.key}>
-								<p className="username">{ message.username }</p>
+								<p className="username"><i className="icon ion-md-contact"></i>{ message.username }</p>
 								<p className="message-content">{ message.content }</p>
 								<p className="time-sent">{ message.sentAt }</p>
 							</li>
@@ -72,7 +72,7 @@ class MessageList extends Component {
 						<label>
 							<input type="text" value={this.state.newMessage} onChange={(e) => this.handleNewMessage(e)} name="newMessage" placeholder="Start chatting!"/>
 						</label>
-						<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }><i class="icon ion-md-paper-plane"></i></button>
+						<button type="submit" className="btn-submit" id="btn-send" onClick={ (e) => this.handleSendNewMessage(e) }><i className="icon ion-md-paper-plane"></i></button>
 					</form>
 				</section>
 

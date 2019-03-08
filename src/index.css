@@ -14,10 +14,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff;
-  font-family: 'Arimo', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
   font-weight: 400;
-  color: #666963;
+  color: #00adb5;
 }
 
 ul {
@@ -49,7 +50,7 @@ h3 {
 form input {
 	font-size: 1.4rem;
 	padding: 1.2rem;
-	border-radius: 5px;
+	/*border-radius: 5px;*/
 	border: 1px solid #eee;
 	width: 100%;
 	-webkit-appearance: none; 
@@ -73,9 +74,10 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 .btn-submit {
 	padding: 10px 1.5rem;
 	border: none;
-	border-radius: 3px;
+	border-radius: 2px;
 	color: #fff;
 	font-size: 1.4rem;
+	letter-spacing: 1px;
 	cursor: pointer;
 }
 

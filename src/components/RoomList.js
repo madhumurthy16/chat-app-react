@@ -24,6 +24,12 @@ class RoomList extends Component {
 		});
 	}
 
+	handleDeleteRoom(roomToDelete,e) {
+		e.preventDefault();
+		this.roomsRef.child(roomToDelete.key).remove();
+		this.setState({ rooms: this.state.rooms.filter(room => room !== roomToDelete ) });
+	}
+
 	componentDidMount() {
 		this.roomsRef.on('child_added', snapshot => {
 			const room = snapshot.val();
@@ -35,12 +41,12 @@ class RoomList extends Component {
 	render() {
 		return (
 			<section id="room-component">
-				<h3>Chat rooms</h3> 
+				<h2>Chat rooms</h2> 
 				<ul id="room-list">
 					{
 						this.state.rooms.map(room => 
-							<li onClick={() => this.props.handleRoomClick(room)} key={room.key}><i class="icon ion-md-checkmark-circle-outline"></i>
-{room.name}</li>	
+							<li onClick={() => this.props.handleRoomClick(room)} key={room.key}><i className="icon ion-md-people"></i>
+							{room.name}<button onClick={ (e) => this.handleDeleteRoom(room,e) } id="btn-delete" type="submit" value="Submit"><i className="icon ion-md-close"></i></button></li>
 						)
 					}
 				</ul>

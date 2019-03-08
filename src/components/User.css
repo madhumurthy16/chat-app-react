@@ -3,20 +3,31 @@
 	font-size: 1.4rem;
 	text-align: center;
 	font-weight: normal;
+	color: #393e46;
+	font-size: 1.8rem;
+	font-weight: normal;
 }
 
 #btn-signin, #btn-signout {
 	background-color: transparent;
 	padding: 0 0.8rem;
 	margin-top: 15px;
+	color: #007E84;
+	font-size: 1.6rem;
+	font-weight: 500;
+	border-radius: 0;
+	width: 80px;
 }
 
 #btn-signin {
-	color: #2E5266;
-	border-radius: 0;
-	border-right: 0.2px solid #A58C32;
+	background: #007E84;
+	color: #eee;
+	padding: 5px 8px;
 }
 
 #btn-signout {
 	background-color: transparent;
+	padding: 4px 8px;
+	color: #005F63;
+
 }

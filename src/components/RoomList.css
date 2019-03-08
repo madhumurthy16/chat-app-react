@@ -5,20 +5,22 @@
 
 ul#room-list {
 	flex-grow: 2;
-	color: #666;
 	margin: 10px 0 30px 0;	
 	font-size: 16px;
 }
 
 #room-list li {
+	display: flex;
 	margin-bottom: 15px;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	cursor: pointer;
+	color: #eee;
 }
 
 #room-list li i {
 	padding: 10px;
-	color: #B99E38;
+	padding-top: 0;
+	color: #00adb5;
 	font-size: 1.5rem;
 }
 
@@ -26,9 +28,33 @@ ul#room-list {
 	margin-bottom: 0;
 }
 
+#btn-delete {
+	border: none;
+	background-color: transparent;
+	margin-left: auto;
+	padding: 0;
+}
+
+#btn-delete:focus {
+	outline: none;
+}
+
+.ion-md-close {
+	color: #888 !important;
+}
+
+.ion-md-close: before {
+	position: relative;
+	bottom: 5px;
+}
+
+.ion-md-close:hover {
+	color: #eee!important;
+}
+
 #form-create-room {
 	flex-grow: 5;
-	border-top: 1px solid #DFDCD9;
+	border-top: 1px solid #222831;
 	width: 100%;
 	padding: 10px 0;
 }
@@ -36,11 +62,12 @@ ul#room-list {
 #form-create-room input {
 	padding: 1rem;
 	border: 1px solid #DFDCD9;
+	background-color: #eee;
 }
 
 #btn-newroom {
 	width: 100%;
-	background-color: #6E8898;
+	background-color: #222831;
 	color: #fff;
 	margin-top: 10px;
 }
